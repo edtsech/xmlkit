@@ -18,8 +18,8 @@
          {:tag :e :content ["secret"]})))
 
 (deftest find-el->>test
-         (is (=  (find-el->> el [:a :d] :content first text) 
-                "secret")))
+         (is (=  (find-el->> el [:a :d] :content first :tag)
+                :e)))
 
 (deftest text-test
   (is (= (text (find-by-tag :a el))

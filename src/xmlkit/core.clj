@@ -8,7 +8,7 @@
 ; (find-el->> input [:Data] :content (map :tag))
 (defmacro find-el
   "Usage:
-   Let's find a first element with tag :Comment 
+   Let's find a first element with tag :Comment
    inside an element with tag :Comments
    (find-el input :Comments :Comment)"
   [el & tags]
@@ -16,7 +16,11 @@
       `(find-by-tag ~(first tags) ~el)
       `(find-el (find-by-tag ~(first tags) ~el) ~@(rest tags))))
 
-(defmacro find-el->> [el tags & funcs]
+(defmacro find-el->>
+   "Usage:
+   Let's find a text of the first comment
+   (find-el->> input [:Data :Comments] :content first text)"
+   [el tags & funcs]
   `(->> (find-el (find-by-tag ~(first tags) ~el)
                  ~@(rest tags))
         ~@funcs))
