@@ -5,7 +5,6 @@
   [pred coll]
   (first (filter pred coll)))
 
-; (find-el->> input [:Data] :content (map :tag))
 (defmacro find-el
   "Usage:
    Let's find a first element with tag :Comment
