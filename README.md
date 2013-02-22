@@ -1,13 +1,41 @@
 # xmlkit
 
-A Clojure library designed to ... well, that part is up to you.
+Few helper functions for parsing XML files in Clojure.
+
+## Installation
+
+```
+[org.clojars.edtsech/xmlkit "0.1.0"]
+```
 
 ## Usage
 
-FIXME
+```
+(def el {:content [{:tag :b}
+                    {:tag :a
+                     :content [{:tag :d
+                                :content [{:tag :e
+                                           :content ["secret"]}]}]}
+                    {:tag :c}]})
+
+(find-by-tag :c el)
+;; => {:tag :c :content ["abc"]}
+
+(text (find-by-tag :a el))
+;; => "secret"
+
+(find-el el :a :d :e)
+;; => {:tag :e :content ["secret"]}
+
+(find-el->> el [:a :d :e] text)
+;; => "secret"
+
+(tag? (find-by-tag :a el))
+;; => true
+```
 
 ## License
 
-Copyright © 2013 FIXME
+Copyright © 2013 edtsech@gmail.com
 
 Distributed under the Eclipse Public License, the same as Clojure.

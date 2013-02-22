@@ -16,12 +16,11 @@
       `(find-el (find-by-tag ~(first tags) ~el) ~@(rest tags))))
 
 (defmacro find-el->>
-   "Usage:
-   Let's find a text of the first comment
-   (find-el->> input [:Data :Comments] :content first text)"
-   [el tags & funcs]
-  `(->> (find-el (find-by-tag ~(first tags) ~el)
-                 ~@(rest tags))
+  "Usage:
+  Let's find a text of the first comment
+  (find-el->> input [:Data :Comments] :content first text)"
+  [el tags & funcs]
+  `(->> (find-el ~el ~@tags)
         ~@funcs))
 
 (defn tag? [el]
