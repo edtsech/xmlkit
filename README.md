@@ -4,13 +4,13 @@ Few helper functions for parsing XML files in Clojure.
 
 ## Installation
 
-```
+```clj
 [org.clojars.edtsech/xmlkit "0.1.0"]
 ```
 
 ## Usage
 
-```
+```clj
 (def el {:content [{:tag :b}
                     {:tag :a
                      :content [{:tag :d

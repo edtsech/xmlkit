@@ -41,6 +41,3 @@
   "Fint first element with tag which is child of el."
   [tag el]
   (find-first (tag= tag) (:content el)))
-
-
-
