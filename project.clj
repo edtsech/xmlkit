@@ -1,4 +1,4 @@
-(defproject org.clojars.edtsech/xmlkit "0.1.0-SNAPSHOT"
+(defproject org.clojars.edtsech/xmlkit "0.1.1-SNAPSHOT"
   :description "Few helper functions for parsing XML files."
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
