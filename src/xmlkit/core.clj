@@ -24,7 +24,7 @@
         ~@funcs))
 
 (defn tag? [el]
-  (:tag el))
+  (boolean (:tag el)))
 
 (defn tag= [tag]
   (fn [x] (= tag (:tag x))))

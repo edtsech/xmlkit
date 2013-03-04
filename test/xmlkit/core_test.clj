@@ -32,4 +32,3 @@
 (deftest text-test
   (is (= (text (find-by-tag :a el))
          "secret")))
-
