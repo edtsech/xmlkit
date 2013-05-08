@@ -11,7 +11,8 @@ Few helper functions for parsing XML files in Clojure.
 ## Usage
 
 ```clj
-(def el {:content [{:tag :b}
+(def el {:tag :x
+         :content [{:tag :b}
                     {:tag :a
                      :content [{:tag :d
                                 :content [{:tag :e
