@@ -25,6 +25,9 @@ Few helper functions for parsing XML files in Clojure.
 (text (find-by-tag :a el))
 ;; => "secret"
 
+(get-text el :a)
+;; => "secret"
+
 (find-el el :a :d :e)
 ;; => {:tag :e :content ["secret"]}
 
