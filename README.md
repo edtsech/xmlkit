@@ -5,7 +5,7 @@ Few helper functions for parsing XML files in Clojure.
 ## Installation
 
 ```clj
-[org.clojars.edtsech/xmlkit "0.1.2"]
+[org.clojars.edtsech/xmlkit "0.1.3"]
 ```
 
 ## Usage

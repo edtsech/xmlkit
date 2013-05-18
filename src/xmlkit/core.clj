@@ -41,3 +41,8 @@
   "Fint first element with tag which is child of el."
   [tag el]
   (find-first (tag= tag) (:content el)))
+
+(defn get-text
+  "Get text of the element."
+  [el tag]
+  (text (find-by-tag tag el)))
